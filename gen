@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+docker build --tag latex .
+docker run --rm -i -v "$PWD":/data latex pdflatex --interaction=batchmode cv.tex >/dev/null 2>&1
+rm -f cv.aux cv.log cv.out cv.fdb_latexmk cv.fls

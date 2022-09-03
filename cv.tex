@@ -1,0 +1,324 @@
+% ==================================================================================================
+% Author: David Oniani
+% License: MIT
+% ==================================================================================================
+
+\documentclass{article}
+
+\usepackage[empty]{fullpage}
+\usepackage[english]{babel}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{fontawesome}
+\usepackage{hyperref}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{xcolor}
+
+% Miscellaneous Settings {{{
+
+% Ensure that the generated pdf is machine readable/ATS parsable
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+\pagestyle{fancy}
+
+\fancyhf{}
+\fancyfoot{}
+
+\renewcommand{\headrulewidth}{0}
+\renewcommand{\footrulewidth}{0}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-0.5in}
+\addtolength{\textheight}{1in}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0}
+
+% Sections formatting
+\titleformat{\section}{
+    \vspace{-4pt}\scshape\raggedright\large
+}{}{0}{}[\color{black}\titlerule\vspace{-4pt}]
+
+% }}}
+
+% Custom Commands {{{
+
+\newcommand{\entry}[4]{
+    \vspace{-1pt}
+    \item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & #2\\
+        \textit{\small#3} & \textit{\small #4}\\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\subentry}[2]{
+    \begin{tabular*}{0.98\textwidth}{l@{\extracolsep{\fill}}r}
+        \textit{\small#1} & \textit{\small #2}\\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\entriesbegin}{\begin{itemize}[leftmargin=*]}
+\newcommand{\entriesend}{\end{itemize}}
+
+\newcommand{\entryitemsstart}{\begin{itemize}[label=\(\circ\)]}
+\newcommand{\entryitemsend}{\end{itemize}\vspace{-4pt}}
+
+\newcommand{\entryitem}[1]{\item\small{#1}}
+\newcommand{\entrysubitem}[1]{\item[\(\circ\)]\small{#1}\vspace{-4pt}}
+
+\newcommand{\social}[3]{\href{#2}{\faicon{#1} #3}}
+
+% }}}
+
+% Nice-looking URLs {{{
+
+% PDF information and nice-looking urls
+\hypersetup{%
+    pdfauthor={David Oniani},
+    pdftitle={David Oniani's CV},
+    pdfsubject={david, oniani, david oniani, cv},
+    pdfkeywords={david, oniani, david oniani, cv},
+    pdflang={English},
+    colorlinks=true,
+    linkcolor={black!64!blue},
+    citecolor={black!64!blue},
+    urlcolor={black!64!blue}
+}
+
+% }}}
+
+% ==================================================================================================
+% CV Starts Here
+% ==================================================================================================
+
+\begin{document}
+
+% Heading {{{
+
+\begin{center}
+    \textbf{\href{https://www.davidoniani.com}{\LARGE David Oniani}}\\\vspace{8pt}
+    \social{mobile}{tel:+11234567890}{+1 (646) 565-1224} \(\circ\)
+    \social{envelope}{mailto:onianidavid@gmail.com}{onianidavid@gmail.com} \(\circ\)
+    \social{globe}{https://www.davidoniani.com}{www.davidoniani.com} \(\circ\)
+    \social{github}{https://github.com/oniani}{oniani} \(\circ\)
+    \social{linkedin}{https://www.linkedin.com/in/davidoniani/}{davidoniani}
+\end{center}
+
+\vspace{2pt}
+
+\begin{center}
+    Visit \href{https://www.davidoniani.com}{www.davidoniani.com} for my publications, software, and more!\\
+\end{center}
+
+% }}}
+
+% Education {{{
+
+\section{Education}
+
+\entriesbegin
+    \entry{\href{https://www.luther.edu/}{Luther College}}{Decorah, IA}{B.A. Computer Science, Mathematics (magna cum laude)}{Aug. 2017 -- May. 2021}
+\entriesend
+
+% }}}
+
+% Technical Skills {{{
+
+\section{Technical Skills}
+
+\entriesbegin
+    \entrysubitem{Languages: Python, Modern C++, Go, Rust, Shell script, Haskell, Lua, SQL, Javascript, HTML, CSS.}
+    \entrysubitem{Tools and Libraries: Linux, macOS, Neovim, Git, Docker, PyTorch, TensorFlow, matplotlib, numpy, pandas, scikit-learn, Flask.}
+    \entrysubitem{Theory: Applied Statistics, Deep Learning, Information Theory, Multivariable Calculus, Real Analysis, Topology.}
+    \entrysubitem{Other Skills: \LaTeX, Markdown, Technical Writing.}
+\entriesend
+
+% }}}
+
+% Work experience {{{
+
+\section{Work Experience}
+
+\entriesbegin
+
+\entry{\href{https://www.pitt.edu/}{University of Pittsburgh}}{Pittsburgh, PA}{Machine Learning Research Scientist}{Feb. 2022 -- Present}
+\entryitemsstart
+    \entryitem{First-authored papers submitted to leading AI, NLP, and engineering conferences and journals.}
+    \entryitem{Researching few-shot and prompt-based learning strategies for efficient text classification.}
+    \entryitem{Lead architect and engineer of OMOP CDM-compliant research data warehouse - ReDWINE.}
+    \entryitem{Giving lectures, presenting my work, and supporting various projects within lab.}
+\entryitemsend
+
+\entry{\href{https://www.dawnlight.com/}{DawnLight} \textnormal{(\small \href{https://www.sequoiacap.com}{Sequoia Capital} Backed Ambient Intelligence and Edge Computing Startup)}}{Palo Alto, CA}{Research Engineer}{Apr. 2021 -- Jan. 2022}
+\entryitemsstart
+    \entryitem{Developed and maintained AI sensing inference runtime for audio and radar (C++ codebase).}
+    \entryitem{Architected and trained highly performant CNN-based AI model for human activity detection.}
+    \entryitem{Implemented APIs and data engineering pipelines for interacting with data platforms.}
+    \entryitem{Together with Principal Scientist, wrote C++ library of signal processing algorithms (libdsp).}
+\entryitemsend
+
+\entry{\href{https://www.mayoclinic.org/}{Mayo Clinic}}{Rochester, MN}{Artificial Intelligence Researcher}{Feb. 2020 -- Sep. 2020}
+\entryitemsstart
+    \entryitem{First-authored papers accepted at major AI and biomedical informatics conferences and journals.}
+    \entryitem{\href{https://github.com/oniani/covid-19-chatbot}{Built chatbot as extension of GPT-2 model by applying BERT, BioBERT, USE, and tf-idf}.}
+    \entryitem{Utilized \href{https://snap.stanford.edu/node2vec/}{node2vec} for generating COVID-19 network embeddings and built \href{https://www.davidoniani.com/covid-19-network/}{co-occurrence network}.}
+    \entryitem{Worked directly under \href{https://www.mayo.edu/research/faculty/shen-feichen-ph-d/bio-20238745}{Dr.~Feichen Shen} and \href{https://www.shrs.pitt.edu/people/yanshan-wang}{Dr.~Yanshan Wang} in division of \href{https://www.mayo.edu/research/faculty/liu-hongfang-ph-d/bio-00055092}{Dr.~Hongfang Liu}.}
+\entryitemsend
+
+\entriesend
+
+% }}}
+
+% Research Experience {{{
+
+\section{Research Experience}
+
+\entriesbegin
+
+% 08/2019 -- 12/2019
+\entry{\href{https://www.luther.edu/}{Luther College}}{Decorah, IA}{\href{https://github.com/oniani/ccl-container-types/tree/master/paper}{Research in Programming Languages and Type Theory with Dr. Alan K. Zaring}}{Fall 2019}
+\entryitemsstart
+    \entryitem{Extended CCL language and wrote type-checking rules.}
+    \entryitem{Introduced the notion of container types into the language.}
+    \entryitem{Designed relational operators for container types.}
+\entryitemsend
+
+% 05/2019 -- 07/2019
+\subentry{\href{https://github.com/oniani/ira-analysis}{Research in Artificial Intelligence and Authorship Attribution with Professor Richard K. Merritt}}{Summer 2019}
+\entryitemsstart
+    \entryitem{Trained convolutional neural networks for image recognition using PyTorch.}
+    \entryitem{Wrote Python programs for PDF image and text extraction and data cleanup.}
+    \entryitem{Performed extensive set of both statistical and textual analyses using state-of-the-art algorithms.}
+\entryitemsend
+
+% 05/2018 -- 06/2018
+\subentry{\href{https://www.luther.edu/news/david-oniani-summer-research}{Research in Unit Testing with Dr. Roman Yasinovskyy}}{Summer 2018}
+\entryitemsstart
+    \entryitem{Automated feedback generation for C++ programming course.}
+    \entryitem{Redesigned and significantly improved SQL and relational algebra solution checker.}
+    \entryitem{Designed testable practice problems for algorithms and data structures course.}
+\entryitemsend
+
+\entriesend
+
+% }}}
+
+\clearpage
+
+% Optional {{{
+
+% Select Pulications {{{
+
+\section{Select Publications}
+
+\entriesbegin
+
+\entrysubitem{\footnotesize\href{https://academic.oup.com/jamia/article/27/8/1259/5847598}{Constructing Co-occurrence Network Embeddings to Assist Association Extraction for COVID-19 and Other Coronavirus Infectious Diseases}}
+\entrysubitem{\footnotesize\href{https://dl.acm.org/doi/abs/10.1145/3388440.3412413}{A Qualitative Evaluation of Language Models on Automatic Question-Answering for COVID-19}}
+\entrysubitem{\footnotesize\href{https://spj.sciencemag.org/journals/hds/aip/9759016/}{Social and Behavioral Determinants of Health in the Era of Artificial Intelligence with Electronic Health Records: A Scoping Review}}
+\entrysubitem{\footnotesize\href{https://www.davidoniani.com/pdf/pythonenv.pdf}{Setting Up Python Development Environment for Use in a Small Classroom}}
+
+\entriesend
+
+% }}}
+
+% Honors and Awards {{{
+
+\section{Honors and Awards}
+
+\entriesbegin
+
+\entrysubitem{Multiple Competitive Scholarships, \href{www.luther.edu}{Luther College} (2017 -- 2020)}
+\entrysubitem{Recipient of 2 Luther College Dean's Office Summer Research Awards, \href{www.luther.edu}{Luther College} (2018, 2019)}
+\entrysubitem{Dean's List Recipient, \href{www.luther.edu}{Luther College} (All Semesters)}
+\entrysubitem{Selected Start-up (\href{https://www.linkedin.com/company/unleashar/}{UnleashAR}), TOP 200, \href{http://www.wolvessummit.com/}{Wolves Summit} (Largest Startup Conference in EU) (2017).}
+\entrysubitem{Gold Medal for Academic Excellence, \href{http://mes.gov.ge/?lang=eng}{Ministry of Education and Science of Georgia} (2016)}
+\entrysubitem{Multiple-time Finalist, \href{https://naec.ge/}{National Mathematics Olympiad of Georgia} (2011 -- 2016)}
+\entrysubitem{7\textsuperscript{th} Place (TOP 10) \href{https://naec.ge/}{National Mathematics Olympiad of Georgia} (2014)}
+\entrysubitem{IMO \& IPhO Nominee, \href{http://mes.gov.ge/?lang=eng}{Ministry of Education and Science of Georgia}, (2014)}
+
+\entriesend
+
+% }}}
+
+% Activities and Memberships {{{
+
+\section{Activities and Memberships}
+
+\entriesbegin
+\entrysubitem{Member, Pi Mu Epsilon (Math Honor Society), 2020 -- Present}
+\entrysubitem{Member, Association for Computing Machinery (ACM), 2022 -- Present}
+\entriesend
+
+% }}}
+
+% Natural Language Proficiency {{{
+
+\section{Natural Language Proficiency}
+
+\entriesbegin
+\entrysubitem{English, Native}
+\entrysubitem{Georgian, Native}
+\entrysubitem{Russian, Native}
+\entrysubitem{Mingrelian, Native}
+\entrysubitem{Japanese, Elementary}
+\entriesend
+
+% }}}
+
+% Volunteer Experience {{{
+
+\section{Volunteer Experience}
+
+\entriesbegin
+\entrysubitem{Transparency International Georgia, Georgian Parliamentary Elections Observation Mission, 2016}
+\entriesend
+
+% }}}
+
+% Other Experience {{{
+
+\section{Other Experience}
+
+\entry{\href{https://www.luther.edu/}{Luther College -- Department of Computer Science}}{Decorah, IA}{Teaching Assistant}{Aug. 2018 -- Jan. 2021}
+\entryitemsstart
+    \entryitem{\href{https://www.luther.edu/catalog/curriculum/computer-science/}{Computational Models (CS 260) with Dr. Alan K. Zaring} (Fall 2020).}
+    \entryitem{\href{https://www.luther.edu/catalog/curriculum/computer-science/}{Object-Oriented Programming With Java (CS 252) with Dr. Shafqat A. Shad} (Fall 2019).}
+    \entryitem{\href{https://www.luther.edu/catalog/curriculum/computer-science/}{Introduction to Computer Science (CS 150) with Dr. Alan K. Zaring} (Fall 2018).}
+    \entryitem{Held help hours and assisted students with homework assignments.}
+    \entryitem{Attended all classes and answered questions during the labs.}
+\entryitemsend
+
+\entry{\href{https://www.luther.edu/its/}{Luther College -- ITS Workstation}}{Decorah, IA}{ITS Workstation Support Engineer}{Jul. 2019 -- Aug. 2019}
+\entryitemsstart
+    \entryitem{Was responsible for installing and updating operating systems across campus.}
+    \entryitem{Troubleshot technical issues of computer systems.}
+    \entryitem{Set up new hardware to be used by college students.}
+    \entryitem{Installed software to be used by faculty for teaching purposes.}
+\entryitemsend
+
+\entry{\href{https://www.luther.edu/its/}{Luther College, ITS -- Software Development}}{Decorah, IA}{Web Programmer}{Jun. 2018 -- Dec. 2018}
+\entryitemsstart
+    \entryitem{Contributed to brand new \href{https://norsehub.luther.edu/}{Norse Hub} web system which has successfully replaced \href{https://my.luther.edu/}{my.luther.edu}.}
+    \entryitem{Communicated with team, wrote reports, and attended weekly SCRUM meetings.}
+    \entryitem{Conducted performance and load testing using JMeter and presented results.}
+    \entryitem{Created data visualization tool utilizing JavaScript DOM.}
+    \entryitem{Migrated from the Microsoft to Linux server and refactored Python code.}
+\entryitemsend
+
+% }}}
+
+% }}}
+
+% ==================================================================================================
+% CV Ends Here
+% ==================================================================================================
+
+\end{document}
