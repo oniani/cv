@@ -5,6 +5,7 @@
 
 \documentclass{article}
 
+\usepackage[dvipsnames]{xcolor}
 \usepackage[empty]{fullpage}
 \usepackage[english]{babel}
 \usepackage{enumitem}
@@ -13,7 +14,6 @@
 \usepackage{hyperref}
 \usepackage{tabularx}
 \usepackage{titlesec}
-\usepackage{xcolor}
 
 % Miscellaneous Settings {{{
 
@@ -42,7 +42,7 @@
 
 % Sections formatting
 \titleformat{\section}{
-    \vspace{-4pt}\scshape\raggedright\large
+    \vspace{-2pt}\scshape\raggedright\large
 }{}{0}{}[\color{black}\titlerule\vspace{-4pt}]
 
 % }}}
@@ -156,12 +156,13 @@
     \entryitem{Giving lectures, presenting my work, and supporting various projects within lab.}
 \entryitemsend
 
-\entry{\href{https://www.dawnlight.com/}{DawnLight} \textnormal{(\small \href{https://www.sequoiacap.com}{Sequoia Capital} Backed Ambient Intelligence and Edge Computing Startup)}}{Palo Alto, CA}{Research Engineer}{Apr. 2021 -- Jan. 2022}
+\entry{\href{https://www.linkedin.com/company/dawnlight/}{DawnLight}}{Palo Alto, CA}{Research Engineer}{Apr. 2021 -- Jan. 2022}
 \entryitemsstart
     \entryitem{Developed and maintained AI sensing inference runtime for audio and radar (C++ codebase).}
     \entryitem{Architected and trained highly performant CNN-based AI model for human activity detection.}
     \entryitem{Implemented Python APIs and data engineering pipelines for interacting with data platforms.}
     \entryitem{Together with Principal Scientist, wrote C++ library of signal processing algorithms (libdsp).}
+    \entryitem{\colorbox{black!64!blue}{\textcolor{white}{\bf NOTE}} DawnLight was \href{https://www.sequoiacap.com}{Sequoia Capital} Backed Ambient Intelligence and Edge Computing Startup.}
 \entryitemsend
 
 \entry{\href{https://www.mayoclinic.org/}{Mayo Clinic}}{Rochester, MN}{Artificial Intelligence Researcher}{Feb. 2020 -- Sep. 2020}
@@ -198,23 +199,21 @@
 \entriesbegin
 
 % 08/2019 -- 12/2019
-\entry{\href{https://www.luther.edu/}{Luther College}}{Decorah, IA}{\href{https://github.com/oniani/ccl-container-types/tree/master/paper}{Research in Programming Languages and Type Theory with Dr. Alan K. Zaring}}{Fall 2019}
+\entry{\href{https://www.luther.edu/}{Luther College}}{Decorah, IA}{\href{https://github.com/oniani/ccl-container-types/tree/master/paper}{Research in Programming Languages and Type Theory with Dr.~Alan K. Zaring}}{Fall 2019}
 \entryitemsstart
-    \entryitem{Extended CCL language and wrote type-checking rules.}
-    \entryitem{Introduced notion of container types into language.}
-    \entryitem{Designed relational operators for container types.}
+    \entryitem{Introduced notion of container types into CCL programming language.}
+    \entryitem{Designed relational operators and type-checking rules for container types.}
 \entryitemsend
 
 % 05/2019 -- 07/2019
 \subentry{\href{https://github.com/oniani/ira-analysis}{Research in Artificial Intelligence and Authorship Attribution with Professor Richard K. Merritt}}{Summer 2019}
 \entryitemsstart
     \entryitem{Trained convolutional neural networks for image recognition using PyTorch.}
-    \entryitem{Wrote Python programs for PDF image and text extraction and data cleanup.}
-    \entryitem{Performed extensive set of both statistical and textual analyses using state-of-the-art algorithms.}
+    \entryitem{Wrote Python programs for PDF data extraction, data cleanup, and statistical analysis.}
 \entryitemsend
 
 % 05/2018 -- 06/2018
-\subentry{\href{https://www.luther.edu/news/david-oniani-summer-research}{Research in Unit Testing with Dr. Roman Yasinovskyy}}{Summer 2018}
+\subentry{\href{https://www.luther.edu/news/david-oniani-summer-research}{Research in Unit Testing with Dr.~Roman Yasinovskyy}}{Summer 2018}
 \entryitemsstart
     \entryitem{Automated feedback generation for C++ programming course.}
     \entryitem{Redesigned and significantly improved SQL and relational algebra solution checker.}
